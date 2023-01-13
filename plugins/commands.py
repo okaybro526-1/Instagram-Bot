@@ -36,23 +36,25 @@ HELP=Config.HELP
 
 @Client.on_message(filters.command("start") & filters.private)
 async def start(bot, cmd):
-	if str(cmd.from_user.id) != OWNER:	
+	if str(cmd.from_user.id) != OWNER and str(cmd.from_user.id) not in AUTH:	
 		await cmd.reply_text(
 			HOME_TEXT.format(cmd.from_user.first_name, cmd.from_user.id, USER, USER, USER, OWNER), 
 			disable_web_page_preview=True,
 			reply_markup=InlineKeyboardMarkup(
 				[
 					[
-						InlineKeyboardButton("👨🏼‍💻Developer", url='https://t.me/subinps'),
-						InlineKeyboardButton("🤖Other Bots", url="https://t.me/subin_works/122")
+						InlineKeyboardButton("👨🏼‍💻Developer", url='https://t.me/pro_noober'),
+						InlineKeyboardButton("🤖Other Bots", url="https://t.me/xtronbots")
 					],
+"""
+
                     [
                         InlineKeyboardButton("🔗Source Code", url="https://github.com/subinps/Instagram-Bot"),
 						InlineKeyboardButton("🧩Deploy Own Bot", url="https://heroku.com/deploy?template=https://github.com/subinps/Instagram-Bot")
-                    ],
+                    ], """
                     [
-                        InlineKeyboardButton("👨🏼‍🦯How To Use?", callback_data="help#subin"),
-						InlineKeyboardButton("⚙️Update Channel", url="https://t.me/subin_works")
+                        InlineKeyboardButton("👨🏼‍🦯How To Use?", callback_data="help#subin") #,
+						#InlineKeyboardButton("My Channel", url="https://t.me/subin_works")
 
                     ]
 					
