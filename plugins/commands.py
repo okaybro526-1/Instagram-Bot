@@ -32,6 +32,7 @@ OWNER=Config.OWNER
 HOME_TEXT=Config.HOME_TEXT
 HOME_TEXT_OWNER=Config.HOME_TEXT_OWNER
 HELP=Config.HELP
+AUTH=Config.AUTH_USERS
 
 
 @Client.on_message(filters.command("start") & filters.private)
